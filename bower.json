@@ -1,0 +1,20 @@
+{
+  "name": "gun-ui-lcd",
+  "authors": [
+    "Stefdv <stefdv2@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-signals": "PolymerElements/iron-signals#^1.0.3"
+  }
+}

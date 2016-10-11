@@ -1,0 +1,134 @@
+<script src="js/lcd.js"></script>
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-signals/iron-signals.html">
+<dom-module id="gun-ui-lcd">
+	<template>
+		<style>
+			@font-face {
+		    font-family: 'digital-7mono';
+		    src: url('fonts/digital-7_mono-webfont.eot');
+		    src: url('fonts/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('fonts/digital-7_mono-webfont.woff') format('woff'),
+		         url('fonts/digital-7_mono-webfont.ttf') format('truetype'),
+		         url('fonts/digital-7_mono-webfont.svg#digital-7mono') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		:host {
+		    display   : block;
+		}
+		.pi-selection {
+		    position: relative;
+		    top     : 0px;
+		    left    : 0px;
+		}
+		</style>
+		<iron-signals on-iron-signal-gun-loaded="_gunLoaded"></iron-signals>
+	    <canvas id='cvs' width='[[width]]' height='[[height]]'>
+       Canvas not supported in your browser
+    </canvas>	
+
+	</template>
+	<script>
+		Polymer({
+			is: 'gun-ui-lcd',
+			properties: {
+				lcd 						: {type: Object, value:function(){return{}}},
+				parent 					: {type: String, value:false},
+				prop 						: {type: String, value:false},
+				value 					: {type: Number, value:0,observer: '_valueChanged'},
+				width 					: {type: Number, value:300},
+				height 					: {type: Number, value:100},
+				threshold 			: {type: Number, value:null},
+				decimals 				: {type: Number, value:2},
+				duration 				: {type: Number, value:1},
+				max             : {type: Number, value:this.max},
+				min 						: {type: Number, value:this.min},
+				design 					: {type: String, value:'darkblue'},
+				battery		      : {type: Number, value:null}, // 0,1,2,3
+				textUpLeft 			: {type: Number, value:null},
+				textUpCenter 		: {type: String, value:null},
+				textUpRight 		: {type: String, value:null},
+				textDownLeft 		: {type: String, value:null},
+				textDownCenter 	: {type: String, value:null},
+				textDownRight 	: {type: String, value:null},
+				units 					: {type: String, value:null},
+				signal 					: {type: Number,value:false}, // like wifi 0,1,2,3,4
+				signal 					: {type: Boolean,value:false},
+				shadow 					: {type: Boolean,value:false},
+				crystal 				: {type: Boolean,value:false},
+				animated 				: {type: Boolean,value:false},
+				former          : {type: Boolean,value:false},
+				trend 					: {type: Boolean,value:false},
+				alarm 					: {type: Boolean,value:false},
+				
+				scalable 				: {type: Boolean,value:false},
+				trend           : {type: Boolean,value: false}
+
+				
+			},
+			ready: function() {
+				this.style.width = this.width;
+				this.style.height = this.style.height;
+				this._init();
+			},
+			_gunLoaded: function() {
+				console.log('_gunLoaded')
+				if(this.parent) { this._subscribe() }
+			},
+			_subscribe: function() {
+					gun.get(this.parent).path(this.prop).on(function(v){
+						console.log('lcd.temp')
+						if(this.value !== v) { 
+							this.value =v
+						}
+				}.bind(this))
+			},
+			_valueChanged: function(n,o) {
+				if(this.lcd instanceof Lcd) this.lcd.setValue(n)
+			},
+			_init: function() {
+				 this.lcd = new Lcd(
+				 	this.$.cvs,{
+            upperCenterText        : this.prop,
+            upperCenterTextVisible : true,
+            unitString             : this.units,
+            unitVisible            : this.units ? true : false,
+            lowerRightText         : this.textDownRight,
+            lowerRightTextVisible  : this.textDownRight ? true : false,
+            minValue               : this.min,
+            maxValue               : this.max,
+            value                  : this.value,
+            decimals               : this.decimals,
+            threshold              : this.threshold,
+            thresholdVisible       : this.threshold ? true : false,
+            upperLeftText          : this.textUpLeft,
+            upperLeftTextVisible   : true,
+            upperRightText  			 : this.textUpRight,
+            upperRightTextVisible  : true,
+            lowerCenterText        : this.textDownCenter,
+            lowerCenterTextVisible : this.textDownCenter ? true : false,
+            formerValueVisible     : this.former,
+            battery                : this.battery,
+            batteryVisible         : this.battery ? true : false,
+            trend                  : '',
+            trendVisible           : this.trend,
+            alarmVisible           : this.alarm ,
+            signalVisible          : this.signal ? true : false,
+            signalStrength         : this.signal,
+            crystalEffectVisible   : this.crystal,
+            foregroundShadowEnabled: this.shadow,
+            width                  : this.width,
+            height                 : this.height,
+            scalable               : this.scalable,
+            design                 : this.design,
+            animated               : this.animated,
+            duration               : this.duration
+                
+         }
+        );       
+      }        
+			
+		});
+	</script>
+</dom-module>
