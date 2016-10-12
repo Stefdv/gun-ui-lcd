@@ -33,9 +33,10 @@ That's it!  The element will monitor and update it's own state now !
 ## gun-ui-lib(rary)
 curently the library consists of;
 <pre>
-gun-ui-lib    : https://github.com/Stefdv/gun-ui-lib    
-gun-ui-gauge  : https://github.com/Stefdv/gun-ui-gauge
-gun-ui-lcd    : https://github.com/Stefdv/gun-ui-lcd  ( your already here )
+gun-ui-lib      : https://github.com/Stefdv/gun-ui-lib     
+gun-ui-gauge    : https://github.com/Stefdv/gun-ui-gauge 
+gun-ui-bargauge : https://github.com/Stefdv/gun-ui-bargauge 
+gun-ui-lcd      : https://github.com/Stefdv/gun-ui-lcd ( you`re already here )
 </pre>
 
 _All canvas elements in the gun-ui-lib are created by Gerrit Grunwald (@hansolo)_**
