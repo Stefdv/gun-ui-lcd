@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "iron-signals": "PolymerElements/iron-signals#^1.0.3"
+    "iron-signals": "PolymerElements/iron-signals#^1.0.3",
+    "gun-db": "*"
   }
 }
