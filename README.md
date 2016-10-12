@@ -11,7 +11,10 @@ Let me show you
 'gun-ui-lcd'
 
 ![alt text](https://cloud.githubusercontent.com/assets/890650/19285672/2d0dbfb0-8ffb-11e6-8b56-ef9025ce5045.jpg)
-
+## install 
+```
+bower install gun-ui-lcd
+```
 ## Okay what about gunDb ?
 Every item in the gun-ui-lib needs 2 attributes, 'parent'  and 'prop'. They represent the key(soul) and the property you want to subscribe to.
 like `gun.get(<parent>).path(<prop>)` 
