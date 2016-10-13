@@ -27,6 +27,10 @@ So in your html it would look like
 ```
 That's it!  The element will monitor and update it's own state now !
 
+## syncing 
+gun-ui-lcd , gun-ui-gauge and gun-ui-bargauge
+![alt text](https://cloud.githubusercontent.com/assets/890650/19337265/e26abdcc-9113-11e6-9fea-e5d8a66bff31.gif)
+
 ## Styling/Theming
 ![alt text](https://cloud.githubusercontent.com/assets/890650/19287504/3ffbd312-9002-11e6-826d-aa547f37bef6.png)
 
