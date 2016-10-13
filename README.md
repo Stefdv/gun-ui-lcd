@@ -11,7 +11,7 @@ gun-ui-lib       : https://github.com/Stefdv/gun-ui-lib                         
 gun-ui-gauge     : https://github.com/Stefdv/gun-ui-gauge                               DATA-VIZ   
 gun-ui-bargauge  : https://github.com/Stefdv/gun-ui-bargauge                            DATA-VIZ   
 gun-ui-lcd       : https://github.com/Stefdv/gun-ui-lcd    ( you`re already here )      DATA-VIZ   
-gun-ui-slider    : https://github.com/Stefdv/gun-ui-slider/blob/master/README.md        INPUT / DATA-VIZ
+gun-ui-slider    : https://github.com/Stefdv/gun-ui-slide                               INPUT / DATA-VIZ
 </pre>
 Disclamer:
 _All canvas elements in the gun-ui-lib are created by Gerrit Grunwald (@hansolo)_**
