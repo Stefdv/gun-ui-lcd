@@ -3,6 +3,16 @@ gun-ui-lcd
 > a member of the gun-ui library.
 > A collection of widgets created to work brilliantly with GUN, or without
 
+
+## gun-ui-lib(rary)
+curently the library consists of;
+<pre>
+gun-ui-lib       : https://github.com/Stefdv/gun-ui-lib                                 CORE
+gun-ui-gauge     : https://github.com/Stefdv/gun-ui-gauge                               DATA-VIZ   
+gun-ui-bargauge  : https://github.com/Stefdv/gun-ui-bargauge                            DATA-VIZ   
+gun-ui-lcd       : https://github.com/Stefdv/gun-ui-lcd    ( you`re already here )      DATA-VIZ   
+gun-ui-slider    : https://github.com/Stefdv/gun-ui-slider/blob/master/README.md        INPUT / DATA-VIZ
+</pre>
 Disclamer:
 _All canvas elements in the gun-ui-lib are created by Gerrit Grunwald (@hansolo)_**
 
@@ -36,14 +46,5 @@ gun-ui-lcd , gun-ui-gauge and gun-ui-bargauge
 
 ## values
 ![alt text](https://cloud.githubusercontent.com/assets/890650/19287458/192c4726-9002-11e6-84b7-a58985a2688e.png)
-
-## gun-ui-lib(rary)
-curently the library consists of;
-<pre>
-gun-ui-lib      : https://github.com/Stefdv/gun-ui-lib     
-gun-ui-gauge    : https://github.com/Stefdv/gun-ui-gauge 
-gun-ui-bargauge : https://github.com/Stefdv/gun-ui-bargauge 
-gun-ui-lcd      : https://github.com/Stefdv/gun-ui-lcd ( you`re already here )
-</pre>
 
 _All canvas elements in the gun-ui-lib are created by Gerrit Grunwald (@hansolo)_**
