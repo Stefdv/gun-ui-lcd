@@ -3,6 +3,9 @@ gun-ui-lcd
 > a member of the gun-ui library.
 > A collection of widgets created to work brilliantly with GUN, or without
 
+## NOTE:
+At the moment the elements in gun-ui-library are probably NOT WORKING with the current version of GunDb !
+I will update them as soon as i have some time...Sorry
 
 ## gun-ui-lib(rary)
 curently the library consists of;
